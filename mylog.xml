@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-06-11T14:38:16.813440Z</date>
+  <millis>1591886296813</millis>
+  <nanos>440000</nanos>
+  <sequence>0</sequence>
+  <logger>com.example.test</logger>
+  <level>INFO</level>
+  <class>com.example.jdbc.DatabaseTest</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>About to test the connection...</message>
+</record>
+<record>
+  <date>2020-06-11T14:38:17.213452Z</date>
+  <millis>1591886297213</millis>
+  <nanos>452000</nanos>
+  <sequence>1</sequence>
+  <logger>com.example.test</logger>
+  <level>WARNING</level>
+  <class>com.example.jdbc.DatabaseTest</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Error testing connection: </message>
+  <exception>
+    <message>java.sql.SQLException: Failed to start database 'test.db' with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057, see the next exception for details.</message>
+    <frame>
+      <class>org.apache.derby.impl.jdbc.SQLExceptionFactory</class>
+      <method>getSQLException</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.impl.jdbc.SQLExceptionFactory</class>
+      <method>getSQLException</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.impl.jdbc.Util</class>
+      <method>seeNextException</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.impl.jdbc.EmbedConnection</class>
+      <method>bootDatabase</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.impl.jdbc.EmbedConnection</class>
+      <method>&lt;init&gt;</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.jdbc.InternalDriver$1</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.jdbc.InternalDriver$1</class>
+      <method>run</method>
+    </frame>
+    <frame>
+      <class>java.security.AccessController</class>
+      <method>doPrivileged</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.jdbc.InternalDriver</class>
+      <method>getNewEmbedConnection</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.jdbc.InternalDriver</class>
+      <method>connect</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.jdbc.InternalDriver</class>
+      <method>connect</method>
+    </frame>
+    <frame>
+      <class>org.apache.derby.jdbc.AutoloadedDriver</class>
+      <method>connect</method>
+    </frame>
+    <frame>
+      <class>java.sql.DriverManager</class>
+      <method>getConnection</method>
+      <line>677</line>
+    </frame>
+    <frame>
+      <class>java.sql.DriverManager</class>
+      <method>getConnection</method>
+      <line>189</line>
+    </frame>
+    <frame>
+      <class>com.example.jdbc.DatabaseTest</class>
+      <method>connectToDatabase</method>
+      <line>72</line>
+    </frame>
+    <frame>
+      <class>com.example.jdbc.DatabaseTest</class>
+      <method>testConnection</method>
+      <line>152</line>
+    </frame>
+    <frame>
+      <class>com.example.jdbc.DatabaseTest</class>
+      <method>main</method>
+      <line>235</line>
+    </frame>
+  </exception>
+</record>
+</log>
